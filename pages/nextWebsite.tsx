@@ -1,7 +1,6 @@
 import { PropsWithChildren, useState } from "react";
 import AggregateGraphs from "../components/AggregateGraphs";
 import CLayout from "../components/CLayout";
-import SingleGraphs from "../components/SingleGraphs";
 import UserSelection from "../components/UserSelection";
 import style from "../styles/nextWebsite.module.css";
 
