@@ -1,5 +1,7 @@
 :root {
     --darkestgrey: rgb(53, 53, 53);
+    --main: rgb(24, 24, 24);
+    --button: rgb(40, 40, 40);
 }
 @font-face {
     font-family: "BebasNeue";
@@ -7,20 +9,19 @@
 }
 
 html {
-    background-color: white;
+    background-color: black;
 }
 
 body {
     background-color: black;
     width: 100vw;
-    height: 100vh;
+
     margin: 0px;
     overflow-x: hidden;
-    position: fixed;
+
     top: 0px;
     left: 0px;
     color: white;
-    font-family: "BebasNeue";
 }
 
 a:visited {
@@ -28,11 +29,14 @@ a:visited {
     text-decoration: none;
 }
 a:link {
+    color: white;
     text-decoration: none;
 }
 a:hover {
+    color: white;
     text-decoration: none;
 }
 a:active {
+    color: white;
     text-decoration: none;
 }

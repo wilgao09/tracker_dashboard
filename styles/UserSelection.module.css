@@ -1,0 +1,6 @@
+.user-card {
+    background-color: var(--button);
+    margin: 6px;
+    padding: 8px;
+    cursor: pointer;
+}

@@ -1,47 +1,26 @@
-.navbar {
-    background-color: black;
-    box-shadow: 0px 5px 0px var(--darkestgrey);
+.container {
+    display: grid;
+    grid-template-columns: 15% 83%;
+    column-gap: 8px;
     width: 100%;
-    height: 64px;
+    margin-top: 16px;
+}
+
+.sidetabs {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 8px;
-    font-family: "BebasNeue";
+    flex-direction: column;
+    padding: 12px;
 }
 
-.navbar-buttons-container {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 100%;
-    margin-right: 24px;
+.main-content {
+    background-color: var(--main);
+    padding: 12px;
 }
 
-.navbar-button {
-    font-family: "BebasNeue";
-    text-align: center;
-
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 18pt;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    margin-top: auto;
-}
-
-@keyframes greyup {
-    0% {
-        background: linear-gradient(
-            to top,
-            var(--darkestgrey) 0%,
-            black 0%,
-            black 100%
-        );
-    }
+@keyframes greyright {
     5% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 5%,
             black 5%,
             black 100%
@@ -49,7 +28,7 @@
     }
     10% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 10%,
             black 10%,
             black 100%
@@ -57,7 +36,7 @@
     }
     15% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 15%,
             black 15%,
             black 100%
@@ -65,7 +44,7 @@
     }
     20% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 20%,
             black 20%,
             black 100%
@@ -73,7 +52,7 @@
     }
     25% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 25%,
             black 25%,
             black 100%
@@ -81,7 +60,7 @@
     }
     30% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 30%,
             black 30%,
             black 100%
@@ -89,7 +68,7 @@
     }
     35% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 35%,
             black 35%,
             black 100%
@@ -97,7 +76,7 @@
     }
     40% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 40%,
             black 40%,
             black 100%
@@ -105,7 +84,7 @@
     }
     45% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 45%,
             black 45%,
             black 100%
@@ -113,7 +92,7 @@
     }
     50% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 50%,
             black 50%,
             black 100%
@@ -121,7 +100,7 @@
     }
     55% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 55%,
             black 55%,
             black 100%
@@ -129,7 +108,7 @@
     }
     60% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 60%,
             black 60%,
             black 100%
@@ -137,7 +116,7 @@
     }
     65% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 65%,
             black 65%,
             black 100%
@@ -145,7 +124,7 @@
     }
     70% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 70%,
             black 70%,
             black 100%
@@ -153,7 +132,7 @@
     }
     75% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 75%,
             black 75%,
             black 100%
@@ -161,7 +140,7 @@
     }
     80% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 80%,
             black 80%,
             black 100%
@@ -169,7 +148,7 @@
     }
     85% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 85%,
             black 85%,
             black 100%
@@ -177,7 +156,7 @@
     }
     90% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 90%,
             black 90%,
             black 100%
@@ -185,7 +164,7 @@
     }
     95% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 95%,
             black 95%,
             black 100%
@@ -193,7 +172,7 @@
     }
     100% {
         background: linear-gradient(
-            to top,
+            to right,
             var(--darkestgrey) 100%,
             black 100%,
             black 100%
@@ -201,14 +180,25 @@
     }
 }
 
-.navbar-button:hover {
-    animation-name: greyup;
+.sidetab-button {
+    font-family: "BebasNeue";
+    text-align: center;
+    padding: 8px;
+    font-size: 18pt;
+
+    background: linear-gradient(
+        to right,
+        var(--darkestgrey) 5%,
+        black 5%,
+        black 100%
+    );
+    margin: 4px;
+    cursor: pointer;
+}
+
+.sidetab-button:hover {
+    animation-name: greyright;
     animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-
-.logo {
-    margin-right: auto;
-    width: 10%;
 }
