@@ -16,3 +16,12 @@ interface SingleGraphProps {
     uuid: number;
     history: Visit[];
 }
+
+interface TableProps {
+    headerColor: string;
+    row1Color: string;
+    row2Color: string;
+    headers: string[];
+    data: any[][];
+    style?: React.CSSProperties
+}

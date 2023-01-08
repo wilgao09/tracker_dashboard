@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
 import CLayout from "../components/CLayout";
+import Backing from "../components/Backing";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,16 +24,35 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <CLayout>
-                <main>
+                <Backing
+                    style={{
+                        textAlign: "center",
+                        fontSize: "20pt",
+                    }}
+                >
                     <p>
                         Central Dashboard for everything the Tracker application
                         tracks.
                     </p>
                     <p>Click below to view dashboards</p>
                     <div>
-                        <button>nextWebsite</button>
+                        <button>
+                            {" "}
+                            <Link
+                                href="/nextWebsite"
+                                style={{
+                                    color: "black",
+                                }}
+                            >
+                                nextWebsite
+                            </Link>
+                        </button>
                     </div>
-                </main>
+                    <p>
+                        This site also serves as a sandbox for me to try out
+                        styling things
+                    </p>
+                </Backing>
             </CLayout>
         </>
     );

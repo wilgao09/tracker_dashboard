@@ -1,0 +1,40 @@
+.dropdown {
+    margin: 8px;
+}
+
+.selection {
+    padding: 8px;
+    margin-bottom: 2px;
+    background-color: var(--button);
+
+    display: flex;
+    flex-direction: row;
+    contain: layout;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    visibility: hidden;
+    box-shadow: 2px 2px 1px black;
+}
+
+.dropdown:hover > .selection {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 1px black;
+}
+
+.options {
+    background-color: var(--darkestgrey);
+    padding: 4px 0px;
+}
+
+.dropdown:hover > .options {
+    visibility: visible;
+}
+
+.option {
+    padding: 4px 8px;
+    cursor: pointer;
+}

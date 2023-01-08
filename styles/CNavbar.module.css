@@ -18,6 +18,11 @@
     margin-right: 24px;
 }
 
+/* .navbar-button-wrapper {
+    animation: greyup 2s linear 0s infinite reverse;
+    animation-play-state: paused;
+} */
+
 .navbar-button {
     font-family: "BebasNeue";
     text-align: center;
@@ -28,14 +33,17 @@
     padding-top: 10%;
     padding-bottom: 10%;
     margin-top: auto;
+    height: 49%;
+
+    /* animation: greyup 4s linear 0s infinite normal; */
 }
 
 @keyframes greyup {
     0% {
         background: linear-gradient(
             to top,
-            var(--darkestgrey) 0%,
-            black 0%,
+            var(--darkestgrey) 5%,
+            black 5%,
             black 100%
         );
     }
@@ -204,11 +212,18 @@
 .navbar-button:hover {
     animation-name: greyup;
     animation-duration: 0.3s;
+    animation-delay: 0s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
 }
 
 .logo {
     margin-right: auto;
     width: 10%;
+    font-size: 24pt;
+    margin-left: 24px;
+    cursor: pointer;
 }

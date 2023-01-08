@@ -1,4 +1,5 @@
 import { VictoryPie } from "victory-pie";
+import CTable from "./CTable";
 
 function processVisitsData(visits: Visit[]) {
     let totalTime = 0;
@@ -35,6 +36,17 @@ export default function SingleGraph(props: SingleGraphProps) {
                     padAngle={4}
                 />
             </div>
+            <CTable
+                headerColor="rgb(53,53,53)"
+                headers={["Location", "Seconds Spent", "Timestamp"]}
+                data={props.history.map((x) => [
+                    x.location,
+                    x.secondsSpent,
+                    x.timeEntered,
+                ])}
+                row1Color="rgb(38,38,38)"
+                row2Color="rgb(24,24,24)"
+            />
         </div>
     );
 }

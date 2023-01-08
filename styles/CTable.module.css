@@ -1,0 +1,13 @@
+.headercell {
+    font-size: 18pt;
+    text-align: left;
+}
+
+.bodycell {
+    font-size: 14pt;
+}
+
+.bodycell,
+.headercell {
+    padding: 6px;
+}
