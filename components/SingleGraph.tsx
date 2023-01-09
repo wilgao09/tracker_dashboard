@@ -6,13 +6,22 @@ function processVisitsData(visits: Visit[]) {
     for (let v of visits) {
         totalTime += v.secondsSpent;
     }
-    let ans = [];
+    let map = new Map<string, number>();
     for (let v of visits) {
-        ans.push({
-            x: v.location,
-            y: (v.secondsSpent / totalTime) * 100,
-        });
+        let vloc = map.get(v.location);
+        if (vloc !== undefined) {
+            map.set(v.location, vloc + v.secondsSpent);
+        } else {
+            map.set(v.location, v.secondsSpent);
+        }
     }
+    let ans: Object[] = [];
+    map.forEach((v, k) => {
+        ans.push({
+            x: k,
+            y: v,
+        });
+    });
 
     return ans;
 }
@@ -33,7 +42,7 @@ export default function SingleGraph(props: SingleGraphProps) {
                     labelPlacement={() => "vertical"}
                     labelPosition={() => "centroid"}
                     innerRadius={93}
-                    padAngle={4}
+                    // padAngle={4}
                 />
             </div>
             <CTable

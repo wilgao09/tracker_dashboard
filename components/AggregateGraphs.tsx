@@ -50,7 +50,7 @@ export default function AggregateGraphs() {
                         labelPlacement={() => "vertical"}
                         labelPosition={() => "centroid"}
                         innerRadius={93}
-                        padAngle={4}
+                        // padAngle={4}
                     />
                 </div>
                 <div className={style["chart-container"]}>
@@ -64,7 +64,7 @@ export default function AggregateGraphs() {
                         labelPlacement={() => "vertical"}
                         labelPosition={() => "centroid"}
                         innerRadius={93}
-                        padAngle={4}
+                        // padAngle={4}
                     />
                 </div>
             </div>
