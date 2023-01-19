@@ -15,7 +15,7 @@ const config = {
 };
 axios.defaults.withCredentials = true;
 const api = axios.create({
-    baseURL: `${config.api}/nextWebsite/data`,
+    baseURL: `${config.api}/api/nextWebsite/data`,
 });
 
 //response data is 
