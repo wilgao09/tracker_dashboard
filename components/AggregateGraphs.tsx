@@ -25,11 +25,17 @@ export default function AggregateGraphs() {
     let [hitsData, setHitsData] = useState<null | Array<Object>>(null);
     let [timeData, setTimeData] = useState<null | Array<Object>>(null);
     useEffect(() => {
-        getAggregateData().then((res) => {
-            let rdata = res.data;
-            setHitsData(processData(rdata.hitsPerPage));
-            setTimeData(processData(rdata.timePerPage));
-        });
+        if (hitsData === null || timeData === null) {
+            getAggregateData().then((res) => {
+                let rdata = res.data;
+                let t1 = processData(rdata.hitsPerPage);
+                let t2 = processData(rdata.timePerPage);
+                setHitsData(t1);
+                setTimeData(t2);
+
+                console.log(t1, "   ", t2);
+            });
+        }
     });
 
     if (hitsData === null || timeData == null) {
