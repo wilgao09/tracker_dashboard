@@ -14,7 +14,7 @@ function processData(rawData: any) {
     for (let dp of rawData) {
         newData.push({
             x: dp[0],
-            y: (dp[1] / total) * 100,
+            y: Math.floor((dp[1] / total) * 100),
         });
     }
 
